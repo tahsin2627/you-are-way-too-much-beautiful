@@ -1,0 +1,86 @@
+/* Basic Reset and Font */
+body {
+    margin: 0;
+    font-family: 'Hind Siliguri', sans-serif;
+    overflow: hidden; /* Prevents scrolling while intro is visible */
+}
+
+/* --- Entry Screen Styling ("The Door") --- */
+#entry-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f4f8; /* A soft off-white background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+    cursor: pointer;
+    transition: opacity 1s ease-out;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.door-image {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.entry-text {
+    color: #333;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+/* --- Main Content Styling ("The Note") --- */
+#main-content {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1.5s ease-in;
+}
+
+.note-container {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    padding: 30px 40px;
+    border-radius: 15px;
+    max-width: 700px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.note-container h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.note-container p {
+    font-size: 1.4rem;
+    line-height: 1.9;
+    color: #34495e;
+    text-align: justify;
+}
+
+.note-container .outro {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    color: #c0392b;
+    margin-top: 30px;
+}
